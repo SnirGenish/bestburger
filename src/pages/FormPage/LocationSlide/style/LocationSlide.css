@@ -1,0 +1,9 @@
+#LocationSlide {
+  align-items: center;
+  justify-content: space-between;
+  padding: 7% 0;
+}
+#searchSlideButtons {
+  width: 80%;
+  justify-content: space-between;
+}

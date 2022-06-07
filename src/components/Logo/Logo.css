@@ -1,0 +1,10 @@
+img {
+  width: 70%;
+  z-index: 3;
+}
+.positionFixed {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 7% 0;
+}

@@ -1,0 +1,25 @@
+#Button {
+  width: 115px;
+  height: 50px;
+  font-size: 17px;
+  cursor: pointer;
+  border-radius: 7px;
+  font-weight: bold;
+  font-style: italic;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.red {
+  background: none;
+  border: #ec6056 4px solid;
+}
+#Button:hover {
+  transform: scale(1.1);
+}
+.blue {
+  background-color: #504a6b;
+  border: none;
+  color: white;
+}

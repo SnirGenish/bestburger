@@ -1,0 +1,30 @@
+#locationSearchBar {
+  background: rgba(255, 255, 255, 0.06);
+  border: solid 4px #ec6056;
+  height: 50px;
+  width: 70vw;
+  border-radius: 8px;
+  font-size: 22px;
+  padding: 0 5%;
+}
+#SearchBar p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5%;
+}
+#answers {
+  width: 70vw;
+  background-color: rgba(255, 255, 255, 0.657);
+}
+#answers ul {
+  list-style: none;
+}
+#answers ul li {
+  padding: 5px;
+  border: 1px black solid;
+  cursor: pointer;
+}
+#answers ul li:hover {
+  background-color: white;
+}

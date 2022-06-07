@@ -1,0 +1,20 @@
+#AboutSlide {
+  align-items: center;
+  justify-content: space-evenly;
+}
+#aboutText {
+  width: 80vw;
+  height: 60vh;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.109);
+  text-align: center;
+  padding: 8%;
+}
+
+#aboutText h1 {
+  margin-bottom: 8%;
+}
+
+#aboutText p {
+  font-size: 18px;
+}
