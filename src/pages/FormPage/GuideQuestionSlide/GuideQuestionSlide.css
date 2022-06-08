@@ -1,0 +1,13 @@
+#GuideQuestionSlide #buttons {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+}
+#GuideQuestionSlide #buttons #GuideQuestionButton {
+  margin: 2.5% 0;
+}
+#GuideQuestionSlide {
+  padding: 8% 0;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -16,7 +16,6 @@ const SearchBar = () => {
   useEffect(() => {
     const getPlaces = async () => {
       try {
-        setTimeout;
         const fetching = await axios.get(
           `https://nameless-citadel-58066.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${inputValue}&types=establishment&key=AIzaSyANPy4Na6KeY6aTgUKRxHv7n7bFmvYJiO0`
         );

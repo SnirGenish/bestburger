@@ -1,0 +1,12 @@
+#GuideQuestionButton {
+  width: 100px;
+  height: 100px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.chosen {
+  background-color: #eb2632;
+}
+.notchosen {
+  background-color: rgba(255, 255, 255, 0.194);
+}

@@ -43,3 +43,7 @@ a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
 }
+.formSlideButtons {
+  width: 80%;
+  justify-content: space-between;
+}

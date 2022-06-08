@@ -11,8 +11,8 @@ const LocationSlide = () => {
         <div className="logosPlace"></div>
         <SearchBar />
       </div>
-      <div className="row" id="searchSlideButtons">
-        <Button text="next" theme="blue" slideTo="#question1" />
+      <div className="row formSlideButtons">
+        <Button text="next" theme="blue" slideTo="#GuideQuestionSlide" />
         <Link to={"/"}>
           <Button slideTo="#f" text="back" theme="red" />
         </Link>
