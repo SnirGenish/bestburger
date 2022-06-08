@@ -24,12 +24,13 @@ const QuestionSlide = () => {
     switch (number) {
       case 1:
         setRangeValue1(input);
-
+        break;
       case 2:
         setRangeValue2(input);
-
+        break;
       case 3:
         setRangeValue3(input);
+        break;
       default:
     }
   };
