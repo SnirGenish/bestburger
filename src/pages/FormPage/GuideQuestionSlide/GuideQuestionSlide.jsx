@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Button from "../../../components/Button/Button";
 import QuestionHeadline from "../../../components/QuestionHeadline/QuestionHeadline";
 import GuideQuestionButton from "./components/GuideQuestionButton";
 import "./GuideQuestionSlide.css";
+import { Context } from "../FormGlobalState";
 
 const GuideQuestionSlide = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [globalState, setGlobalState] = useContext(Context);
   const [currentSize, setCurrentSize] = useState("");
   return (
     <div id="GuideQuestionSlide" className="slide column even">
@@ -38,7 +41,18 @@ const GuideQuestionSlide = () => {
         />
       </div>
       <div className="row formSlideButtons">
-        <Button text="next" theme="blue" slideTo="#question1" />
+        <Button
+          text="next"
+          theme="blue"
+          slideTo={currentSize ? "#question1" : null}
+          clickFunction={(e) => {
+            setGlobalState((prev) => {
+              let newObj = { ...prev };
+              newObj.size = currentSize;
+              return newObj;
+            });
+          }}
+        />
         <Button slideTo="#LocationSlide" text="back" theme="red" />
       </div>
     </div>

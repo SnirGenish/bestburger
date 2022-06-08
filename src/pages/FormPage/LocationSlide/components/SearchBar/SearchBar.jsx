@@ -1,15 +1,24 @@
 import axios from "axios";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useContext } from "react";
 import "./SearchBar.css";
+import { Context } from "../../../FormGlobalState";
 
 const SearchBar = () => {
+  // eslint-disable-next-line no-unused-vars
+  const [globalState, setGlobalState] = useContext(Context);
   const [placesList, setPlacesList] = useState([]);
   const [inputValue, setInputValue] = useState("");
+
   const answersRef = useRef(null);
   const showAnswers = () => {
     answersRef.current.style.display = "block";
   };
-  const choseAnswer = (e) => {
+  const ChoseAnswer = (e) => {
+    setGlobalState((prev) => {
+      let newObj = { ...prev };
+      newObj.location = e;
+      return newObj;
+    });
     setInputValue(e);
     answersRef.current.style.display = "none";
   };
@@ -24,7 +33,7 @@ const SearchBar = () => {
             const terms = e.terms;
             return (
               <li
-                onClick={(e) => choseAnswer(e.currentTarget.innerText)}
+                onClick={(e) => ChoseAnswer(e.currentTarget.innerText)}
                 key={e.description}
               >
                 <span>
@@ -41,6 +50,7 @@ const SearchBar = () => {
       }
     };
     getPlaces();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inputValue]);
 
   return (

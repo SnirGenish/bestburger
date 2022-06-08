@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useCallback } from "react";
 import QuestionHeadline from "../../../components/QuestionHeadline/QuestionHeadline";
 import questions from "../../../constant/questions";
 import Button from "../../../components/Button/Button";
 import "./style/QuestionSlide.css";
 import Image from "./components/Image/Image";
-
+import { Context } from "../FormGlobalState";
+import { useNavigate } from "react-router-dom";
 const QuestionSlide = () => {
-  const [rangeValue1, setRangeValue1] = useState(1);
-  const [rangeValue2, setRangeValue2] = useState(1);
-  const [rangeValue3, setRangeValue3] = useState(1);
+  // eslint-disable-next-line no-unused-vars
+  const [globalState, setGlobalState] = useContext(Context);
+  const [rangeValue1, setRangeValue1] = useState("1");
+  const [rangeValue2, setRangeValue2] = useState("1");
+  const [rangeValue3, setRangeValue3] = useState("1");
   const rangeValueFinder = (number) => {
     switch (number) {
       case 1:
@@ -34,6 +37,145 @@ const QuestionSlide = () => {
       default:
     }
   };
+  const calcScore = () => {
+    let finaleScore = 0;
+    switch (rangeValue1) {
+      case "2" || "4":
+        finaleScore += 1;
+        break;
+      case "3":
+        finaleScore += 2;
+        break;
+      default:
+        break;
+    }
+    switch (rangeValue2) {
+      case "1":
+        finaleScore += 4;
+        break;
+      case "2":
+        finaleScore += 3;
+        break;
+      case "3":
+        finaleScore += 2;
+        break;
+      case "4":
+        finaleScore += 1;
+        break;
+      default:
+        break;
+    }
+    switch (globalState.size) {
+      case "R":
+        switch (rangeValue3) {
+          case "1":
+            finaleScore += 4;
+            break;
+          case "2":
+            finaleScore += 3;
+            break;
+          case "3":
+            finaleScore += 2;
+            break;
+          case "4":
+            finaleScore += 1;
+            break;
+
+          default:
+            break;
+        }
+        break;
+      case "MR":
+        switch (rangeValue3) {
+          case "1":
+          case "3":
+            finaleScore += 3;
+            break;
+          case "2":
+            finaleScore += 4;
+            break;
+          case "4":
+            finaleScore += 2;
+            break;
+          case "5":
+            finaleScore += 1;
+            break;
+
+          default:
+            break;
+        }
+        break;
+      case "M":
+        switch (rangeValue3) {
+          case "1":
+          case "5":
+            finaleScore += 2;
+            break;
+          case "2":
+          case "4":
+            finaleScore += 3;
+            break;
+          case "3":
+            finaleScore += 4;
+            break;
+
+          default:
+            break;
+        }
+        break;
+      case "MW":
+        switch (rangeValue3) {
+          case "5":
+          case "3":
+            finaleScore += 3;
+            break;
+          case "4":
+            finaleScore += 4;
+            break;
+          case "2":
+            finaleScore += 2;
+            break;
+          case "1":
+            finaleScore += 1;
+            break;
+
+          default:
+            break;
+        }
+        break;
+      case "WD":
+        switch (rangeValue3) {
+          case "5":
+            finaleScore += 4;
+            break;
+          case "4":
+            finaleScore += 3;
+            break;
+          case "3":
+            finaleScore += 2;
+            break;
+          case "2":
+            finaleScore += 1;
+            break;
+
+          default:
+            break;
+        }
+        break;
+      default:
+        break;
+    }
+    setGlobalState((prev) => {
+      let newObj = { ...prev };
+      newObj.Score = finaleScore;
+      return newObj;
+    });
+  };
+  const navigate = useNavigate();
+  const handleOnClick = useCallback(
+    () => navigate("/result", { replace: true }),
+    [navigate]
+  );
   const mappedQuestions = questions.map((e) => {
     return (
       <div
@@ -58,12 +200,17 @@ const QuestionSlide = () => {
         />{" "}
         <div className="row formSlideButtons">
           <Button
-            text="next"
+            text={e.qNumber === 3 ? "submit" : "next"}
             theme="blue"
+            clickFunction={() => {
+              if (e.qNumber === 3) {
+                calcScore();
+                calcScore();
+                handleOnClick();
+              }
+            }}
             slideTo={
-              e.qNumber === 3
-                ? "#FinaleScore"
-                : "#" + e.id.slice(0, 8) + (e.qNumber + 1)
+              e.qNumber === 3 ? null : "#" + e.id.slice(0, 8) + (e.qNumber + 1)
             }
           />
           <Button

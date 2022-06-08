@@ -25,8 +25,8 @@ html {
   background: rgb(239, 170, 140);
   background: linear-gradient(
     145deg,
-    rgba(239, 170, 140, 1) 75%,
-    rgb(231, 205, 193) 100%
+    rgba(239, 170, 140, 0.5) 75%,
+    rgb(255, 248, 244) 100%
   );
 }
 .even {
@@ -34,8 +34,8 @@ html {
   background: rgb(239, 170, 140);
   background: linear-gradient(
     35deg,
-    rgba(239, 170, 140, 1) 75%,
-    rgba(231, 205, 193) 100%
+    rgba(239, 170, 140, 0.5) 75%,
+    rgb(255, 248, 244) 100%
   );
 }
 a {

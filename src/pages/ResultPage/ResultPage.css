@@ -1,0 +1,15 @@
+#ResultPage {
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7% 0;
+}
+.location {
+  font-size: larger;
+  font-weight: bolder;
+  color: #240747;
+}
+.score {
+  color: #eb2632;
+  font-size: 50px;
+}

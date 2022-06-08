@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../FormGlobalState";
 import SearchBar from "./components/SearchBar/SearchBar";
 import Button from "../../../components/Button/Button";
 import "./style/LocationSlide.css";
 import { Link } from "react-router-dom";
 
 const LocationSlide = () => {
+  const [globalState] = useContext(Context);
   return (
     <div id="LocationSlide" className="slide column odd">
       <div className="column">
@@ -12,9 +14,13 @@ const LocationSlide = () => {
         <SearchBar />
       </div>
       <div className="row formSlideButtons">
-        <Button text="next" theme="blue" slideTo="#GuideQuestionSlide" />
+        <Button
+          text="next"
+          theme="blue"
+          slideTo={globalState.location ? "#GuideQuestionSlide" : null}
+        />
         <Link to={"/"}>
-          <Button slideTo="#f" text="back" theme="red" />
+          <Button text="back" theme="red" />
         </Link>
       </div>
     </div>

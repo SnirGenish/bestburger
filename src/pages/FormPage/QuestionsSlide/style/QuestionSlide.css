@@ -8,7 +8,7 @@
 #Range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background-color: red;
+  background-color: #eb2632;
   height: 48px;
   border-radius: 50%;
   width: 48px;
