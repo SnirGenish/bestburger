@@ -21,16 +21,16 @@ const Image = (props) => {
     switch (props.num) {
       case "2":
         return <img className="image" src={bun2} alt="" />;
-        break;
+
       case "3":
         return <img className="image" src={bun3} alt="" />;
-        break;
+
       case "4":
         return <img className="image" src={bun4} alt="" />;
-        break;
+
       case "5":
         return <img className="image" src={bun5} alt="" />;
-        break;
+
       default:
         return <img className="image" src={bun1} alt="" />;
     }
@@ -38,16 +38,16 @@ const Image = (props) => {
     switch (props.num) {
       case "2":
         return <img className="image" src={plate2} alt="" />;
-        break;
+
       case "3":
         return <img className="image" src={plate3} alt="" />;
-        break;
+
       case "4":
         return <img className="image" src={plate4} alt="" />;
-        break;
+
       case "5":
         return <img className="image" src={plate5} alt="" />;
-        break;
+
       default:
         return <img className="image" src={plate1} alt="" />;
     }
@@ -55,16 +55,16 @@ const Image = (props) => {
     switch (props.num) {
       case "2":
         return <img className="image" src={patty2} alt="" />;
-        break;
+
       case "3":
         return <img className="image" src={patty3} alt="" />;
-        break;
+
       case "4":
         return <img className="image" src={patty4} alt="" />;
-        break;
+
       case "5":
         return <img className="image" src={patty5} alt="" />;
-        break;
+
       default:
         return <img className="image" src={patty1} alt="" />;
     }

@@ -13,26 +13,24 @@ const QuestionSlide = () => {
     switch (number) {
       case 1:
         return rangeValue1;
-        break;
       case 2:
         return rangeValue2;
-        break;
       case 3:
         return rangeValue3;
-        break;
+      default:
     }
   };
   const setRangeValueFinder = (number, input) => {
     switch (number) {
       case 1:
         setRangeValue1(input);
-        break;
+
       case 2:
         setRangeValue2(input);
-        break;
+
       case 3:
         setRangeValue3(input);
-        break;
+      default:
     }
   };
   const mappedQuestions = questions.map((e) => {
