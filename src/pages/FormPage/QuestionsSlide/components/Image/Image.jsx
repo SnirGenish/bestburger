@@ -17,7 +17,6 @@ import patty4 from "../../../../../svgs/patty/4.svg";
 import patty5 from "../../../../../svgs/patty/5.svg";
 
 const Image = (props) => {
-  console.log(props.num);
   if (props.image === "bun") {
     switch (props.num) {
       case "2":
