@@ -184,8 +184,8 @@ const QuestionSlide = () => {
         id={e.id}
         className={
           e.qNumber % 2
-            ? "questionslide column slide odd"
-            : "questionslide column slide even"
+            ? "questionslide paddingMobile column slide odd"
+            : "questionslide paddingMobile column slide even"
         }
       >
         <div className="logosPlace"></div>

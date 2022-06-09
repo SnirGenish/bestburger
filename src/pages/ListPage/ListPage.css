@@ -1,7 +1,6 @@
 #ListPage {
   align-items: center;
   justify-content: space-between;
-  padding: 7% 0;
   gap: 5%;
 }
 #list {

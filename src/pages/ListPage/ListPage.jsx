@@ -44,7 +44,7 @@ const ListPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div id="ListPage" className="page odd column ">
+    <div id="ListPage" className="paddingMobile page odd column ">
       <Logo />
       <div id="list">
         <h1>Top List</h1>

@@ -40,7 +40,7 @@ const ResultPage = () => {
   };
 
   return (
-    <div id="ResultPage" className="odd column page ">
+    <div id="ResultPage" className="paddingMobile odd column page ">
       <Logo />
       <div className="text">
         <h3 className="anim1">

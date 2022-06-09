@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const LocationSlide = () => {
   const [globalState] = useContext(Context);
   return (
-    <div id="LocationSlide" className="slide column odd">
+    <div id="LocationSlide" className="paddingMobile slide column odd">
       <div className="column">
         <div className="logosPlace"></div>
         <SearchBar />

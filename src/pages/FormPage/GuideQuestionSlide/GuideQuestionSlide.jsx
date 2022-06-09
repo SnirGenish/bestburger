@@ -10,7 +10,7 @@ const GuideQuestionSlide = () => {
   const [globalState, setGlobalState] = useContext(Context);
   const [currentSize, setCurrentSize] = useState("");
   return (
-    <div id="GuideQuestionSlide" className="slide column even">
+    <div id="GuideQuestionSlide" className="paddingMobile slide column even">
       <div className="logosPlace"></div>
       <QuestionHeadline text="which way have you ordered your burger?" />
       <div id="buttons" className="row">
