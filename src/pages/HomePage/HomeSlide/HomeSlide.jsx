@@ -6,7 +6,7 @@ import "./HomeSlide.css";
 
 const HomeSlide = () => {
   return (
-    <div id="HomeSlide" className="slide odd column">
+    <div id="HomeSlide" className="paddingMobile slide odd column">
       <div className="logosPlace"></div>{" "}
       <div className="row" id="homeSlideButtons">
         <Link to={"/form"}>

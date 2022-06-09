@@ -4,7 +4,7 @@ import "./AboutSlide.css";
 
 const AboutSlide = () => {
   return (
-    <div id="AboutSlide" className="slide column even">
+    <div id="AboutSlide" className="paddingMobile slide column even">
       <div className="logosPlace"></div>
       <div id="aboutText">
         <h1>About</h1>

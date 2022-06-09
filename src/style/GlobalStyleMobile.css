@@ -7,4 +7,8 @@
     height: 100%;
     width: 100%;
   }
+  .paddingMobile {
+    padding-bottom: 20%;
+    padding-top: 7%;
+  }
 }

@@ -40,7 +40,8 @@ const QuestionSlide = () => {
   const calcScore = () => {
     let finaleScore = 0;
     switch (rangeValue1) {
-      case "2" || "4":
+      case "2":
+      case "4":
         finaleScore += 1;
         break;
       case "3":

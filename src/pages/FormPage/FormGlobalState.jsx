@@ -4,6 +4,7 @@ const stateForm = {
   location: "",
   size: "",
   Score: 0,
+  topList: [],
 };
 export const Context = React.createContext();
 

@@ -6,6 +6,7 @@ import Button from "../../components/Button/Button";
 import { addResultToTopList } from "../../api/addResultToTopList";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { getList } from "../../api/getList";
 const ResultPage = () => {
   const [totalScore, setTotalScore] = useState(null);
   // eslint-disable-next-line no-unused-vars
@@ -29,25 +30,31 @@ const ResultPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const resetDataAfterSubmit = () => {
-    setGlobalState({
-      location: "",
-      size: "",
-      Score: 0,
+    setGlobalState((prev) => {
+      let newObj = { ...prev };
+      newObj.location = "";
+      newObj.size = "";
+      newObj.Score = 0;
+      newObj.topList = prev.topList;
+      return newObj;
     });
   };
+
   return (
     <div id="ResultPage" className="odd column page ">
       <Logo />
       <div className="text">
-        <h3>
+        <h3 className="anim1">
           the score you gave{" "}
           <span className="location"> "{globalState.location}" </span> is:
         </h3>
-        <h1>
+        <h1 className="anim2">
           <span className="score"> {globalState.Score}</span>/10
         </h1>
-        <h3>total score:</h3>
-        <h1>{totalScore ? `${totalScore}/10` : "spinner"}</h1>
+        <div className="anim3">
+          <h3>total score:</h3>
+          <h1>{totalScore ? `${totalScore}/10` : "spinner"}</h1>
+        </div>
       </div>
       <Link to={"/list"}>
         <Button
