@@ -6,7 +6,6 @@ import Button from "../../components/Button/Button";
 import { addResultToTopList } from "../../api/addResultToTopList";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { getList } from "../../api/getList";
 const ResultPage = () => {
   const [totalScore, setTotalScore] = useState(null);
   // eslint-disable-next-line no-unused-vars
