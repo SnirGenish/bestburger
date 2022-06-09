@@ -6,11 +6,22 @@
 #list {
   background-color: rgba(255, 255, 255, 0.437);
   height: 100%;
-  width: 90%;
+  width: 50%;
   border-radius: 10px;
   align-items: center;
-  padding: 5%;
+  padding: 2% 5%;
   overflow: scroll;
+}
+@media (max-width: 800px) {
+  #list {
+    background-color: rgba(255, 255, 255, 0.437);
+    height: 100%;
+    width: 90%;
+    border-radius: 10px;
+    align-items: center;
+    padding: 5%;
+    overflow: scroll;
+  }
 }
 #list h1 {
   color: #eb2632;

@@ -10,14 +10,16 @@ import ResultPage from "./pages/ResultPage/ResultPage";
 const App = () => {
   return (
     <FormGlobalState>
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Form" element={<FormPage />} />
-          <Route path="/result" element={<ResultPage />} />
-          <Route path="/List" element={<ListPage />} />
-        </Routes>
-      </Router>
+      <div id="cont">
+        <Router>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/Form" element={<FormPage />} />
+            <Route path="/result" element={<ResultPage />} />
+            <Route path="/List" element={<ListPage />} />
+          </Routes>
+        </Router>
+      </div>
     </FormGlobalState>
   );
 };

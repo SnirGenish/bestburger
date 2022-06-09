@@ -47,3 +47,26 @@ a {
   width: 80%;
   justify-content: space-between;
 }
+.page {
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+  border-radius: 30px;
+  scroll-behavior: smooth;
+  position: relative;
+}
+.slide {
+  height: 100%;
+  width: 100%;
+  padding: 3% 0;
+}
+#cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.paddingDesk {
+  padding: 2% 0;
+}

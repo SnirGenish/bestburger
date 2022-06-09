@@ -1,10 +1,18 @@
 img {
-  width: 70%;
+  width: 25%;
   z-index: 3;
 }
+
 .positionFixed {
+  width: 15%;
   position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  padding: 7% 0;
+  padding: 3% 0;
+}
+@media (max-width: 800px) {
+  img {
+    width: 70%;
+    z-index: 3;
+  }
 }

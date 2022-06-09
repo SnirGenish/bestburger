@@ -3,18 +3,29 @@
   justify-content: space-evenly;
 }
 #aboutText {
-  width: 80vw;
-  height: 50vh;
+  width: 80%;
+  height: 50%;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.109);
   text-align: center;
-  padding: 8%;
+  padding: 3%;
 }
-
 #aboutText h1 {
-  margin-bottom: 8%;
+  margin-bottom: 3%;
 }
-
+@media (max-width: 800px) {
+  #aboutText {
+    width: 80vw;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.109);
+    text-align: center;
+    padding: 8%;
+  }
+  #aboutText h1 {
+    margin-bottom: 8%;
+  }
+}
 #aboutText p {
   font-size: 18px;
 }
