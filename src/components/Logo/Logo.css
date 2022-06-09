@@ -1,4 +1,4 @@
-img {
+.Logo {
   width: 25%;
   z-index: 3;
 }
@@ -11,7 +11,14 @@ img {
   padding: 3% 0;
 }
 @media (max-width: 800px) {
-  img {
+  .positionFixed {
+    width: 50%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 3% 0;
+  }
+  .Logo {
     width: 70%;
     z-index: 3;
   }

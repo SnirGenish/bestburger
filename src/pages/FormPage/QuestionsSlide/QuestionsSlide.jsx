@@ -190,15 +190,17 @@ const QuestionSlide = () => {
       >
         <div className="logosPlace"></div>
         <QuestionHeadline text={e.title} />
-        <Image image={e.photoLibrary} num={rangeValueFinder(e.qNumber)} />
-        <input
-          type="range"
-          value={parseInt(rangeValueFinder(e.qNumber))}
-          onChange={(f) => setRangeValueFinder(e.qNumber, f.target.value)}
-          id="Range"
-          min="1"
-          max="5"
-        />{" "}
+        <div className="mobileSwitch">
+          <Image image={e.photoLibrary} num={rangeValueFinder(e.qNumber)} />
+          <input
+            type="range"
+            value={parseInt(rangeValueFinder(e.qNumber))}
+            onChange={(f) => setRangeValueFinder(e.qNumber, f.target.value)}
+            id="Range"
+            min="1"
+            max="5"
+          />{" "}
+        </div>
         <div className="row formSlideButtons">
           <Button
             text={e.qNumber === 3 ? "submit" : "next"}

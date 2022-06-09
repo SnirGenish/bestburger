@@ -6,7 +6,7 @@ const Logo = (props) => {
   return (
     <img
       src={Logosvg}
-      className={props.isFixed ? "positionFixed" : ""}
+      className={props.isFixed ? "positionFixed Logo" : "Logo"}
       alt="Logo"
     />
   );
