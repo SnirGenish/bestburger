@@ -10,7 +10,10 @@ import ResultPage from "./pages/ResultPage/ResultPage";
 const App = () => {
   return (
     <FormGlobalState>
-      <div id="cont">
+      <div
+        id="cont"
+        style={{ height: window.innerHeight, width: window.innerWidth }}
+      >
         <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />

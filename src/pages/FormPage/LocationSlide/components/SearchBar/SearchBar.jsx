@@ -25,8 +25,11 @@ const SearchBar = () => {
   useEffect(() => {
     const getPlaces = async () => {
       try {
-        const fetching = await axios.get(
-          `https://nameless-citadel-58066.herokuapp.com/https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${inputValue}&types=establishment&key=AIzaSyANPy4Na6KeY6aTgUKRxHv7n7bFmvYJiO0`
+        const fetching = await axios.post(
+          `https://shielded-woodland-11387.herokuapp.com/`,
+          {
+            text: inputValue,
+          }
         );
         if (fetching.data.status === "OK") {
           const mappedData = fetching.data.predictions.map((e) => {
